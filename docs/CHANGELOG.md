@@ -2,18 +2,33 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/).
-
 ## [Unreleased]
 ### Added
-- New feature to integrate with LayerMesh for scalability.
+- Initial version of the Context Layer platform.
+- Introduced AI agents for context-aware decision-making.
 
 ### Changed
-- Improved smart contract interaction for better security.
+- Optimized Ethereum blockchain interaction layer.
+- Refined smart contract triggers for better performance.
 
 ### Fixed
-- Fixed bug in AI agent decision-making process.
+- Minor UI bug in the agent dashboard.
 
 ## [1.0.0] - 2025-05-17
 ### Added
-- Initial release of Context Layer with AI agent integration on Ethereum.
+- Full integration with the Ethereum blockchain (ERC20).
+- Developed ContextChain and LayerMesh components for seamless AI blockchain interaction.
+- Added LayerMesh for decentralized infrastructure to deploy and scale AI models.
+- Initial version of the Context Layer protocol for AI agent communication.
+
+### Changed
+- Updated smart contract logic for more secure transactions.
+- Improved agent task automation.
+
+### Fixed
+- Fixed security vulnerability in smart contract access control.
+
+## [0.1.0] - 2025-04-20
+### Added
+- Initial project structure.
+- Set up basic repository and documentation.
