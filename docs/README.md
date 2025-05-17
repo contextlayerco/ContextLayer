@@ -2,11 +2,15 @@
 
 A decentralized protocol for real-time decision-making on Ethereum blockchain. Context-aware AI protocols integrated with decentralized applications.
 
+---
+
 ## Features
 
 - Real-time AI-powered decision-making for decentralized applications.
 - Ethereum blockchain integration (ERC20).
 - Scalable and modular architecture for AI models.
+
+---
 
 ## Getting Started
 
@@ -33,6 +37,8 @@ npm install
 INFURA_PROJECT_ID=your_infura_project_id
 PRIVATE_KEY=your_ethereum_private_key
 
+---
+
 ## Technologies Used
 Ethereum (ERC-20)
 
@@ -45,6 +51,8 @@ Ethereum (ERC-20)
 - Express
 
 - dotenv
+
+---
 
 ## License
 This project is licensed under the Apache License 2.0.
