@@ -1,8 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+require('dotenv').config();
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 3000;
 
-const App = () => {
-  return <h1>Welcome to the Context Layer</h1>;
-};
+app.get('/', (req, res) => {
+  res.send('Welcome to the ContextLayer API');
+});
 
-ReactDOM.render(<App />, document.getElementById('root'));
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+});
