@@ -118,34 +118,4 @@ Once your contracts are deployed and the AI agent is ready, it’s time to integ
 1. **Deploy the Smart Contracts**: Use Truffle’s migration feature to deploy the contracts to the Ethereum network.
 2. **Run the AI Agent**: Deploy the AI agent and connect it to the blockchain. Ensure that it’s receiving live data and making decisions based on it.
 
-## Contributing to Context Layer
-
-We welcome contributions to Context Layer! Whether it’s fixing bugs, adding new features, or improving documentation, your contributions are valuable and help make the platform stronger.
-
-### How to Contribute
-
-1. **Fork the repository**: Begin by forking the [Context Layer repository](#) to your GitHub account.
-
-2. **Create a new branch**: Once you've forked the repository, create a new branch from the `main` branch for your changes.
-
-3. **Make your changes**: Modify the code, fix bugs, or add new features. Be sure to write tests for new features to maintain code integrity.
-
-4. **Write tests**: For any new features, make sure to add corresponding tests to ensure the platform behaves as expected.
-
-5. **Submit a pull request (PR)**: Once you’ve made your changes, submit a pull request with a clear description of what you’ve changed and why. Ensure the PR is against the `main` branch.
-
-6. **Review process**: After submitting your PR, it will be reviewed by a team member. If there are any changes required, they will be discussed and incorporated.
-
-### Code of Conduct
-
-When contributing to **Context Layer**, please follow our [Code of Conduct](#). It ensures that the community remains respectful, collaborative, and welcoming to everyone.
-
-### Contributing Guidelines
-
-To help streamline the process, make sure to review our [Contributing Guidelines](#) for specifics on submitting pull requests, code style, and how to handle issues.
-
----
-
-With this guide, you should now have the knowledge to build, extend, and contribute to the **Context Layer** platform. For more advanced topics, such as optimization and security, check out the **API Reference** and **Security** sections.
-
 ---
