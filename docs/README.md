@@ -26,10 +26,6 @@ Stay connected and follow us on:
 - **X**: [x.com/contextlayereth](https://x.com/contextlayereth)
 - **Telegram**: [t.me/contextlayer](https://t.me/contextlayer)
 
-## License
-
-This project is licensed under the Apache License, Version 2.0 - see the [LICENSE](./LICENSE) file for details.
-
 ## Workflow Overview
 
 Below is the high-level workflow of how the **Context Layer** platform functions, from building AI agents to deploying and interacting with Ethereum smart contracts.
@@ -51,3 +47,7 @@ graph TD
     L --> H
     L --> M[End of Interaction Cycle]
 ```
+
+## License
+
+This project is licensed under the Apache License, Version 2.0 - see the [LICENSE](./LICENSE) file for details.
