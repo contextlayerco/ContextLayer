@@ -1,0 +1,21 @@
+{
+  "name": "contextlayer",
+  "version": "1.0.0",
+  "description": "ContextLayer is a decentralized protocol for real-time AI decision-making on Ethereum.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "web3": "^1.5.0",
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "author": "Your Name",
+  "license": "Apache-2.0"
+}
