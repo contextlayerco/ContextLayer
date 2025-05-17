@@ -38,7 +38,7 @@ By integrating AI with blockchain technology, **Context Layer** is paving the wa
 
 ## How to Get Started?
 
-To get started with **Context Layer**, follow the steps in the **Quick Start Guide** to set up your development environment, deploy your first AI agent, and integrate it with Ethereum’s blockchain.
+To get started with **Context Layer**, follow the steps in the [Quick Start Guide](./quick-start-guide.md) to set up your development environment, deploy your first AI agent, and integrate it with Ethereum’s blockchain.
 
 The **Context Layer** ecosystem offers detailed guides, APIs, and SDKs that will help you through every step of development. Whether you are an experienced developer or just starting out, our resources are designed to make the integration of AI and blockchain as smooth and efficient as possible.
 
