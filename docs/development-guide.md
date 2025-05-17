@@ -1,188 +1,151 @@
 # Development Guide
 
-Welcome to the **Context Layer** Development Guide! This document provides detailed instructions for developers on how to extend and build on top of the **Context Layer** platform. Whether you're creating custom AI agents, developing new smart contract integrations, or contributing to the core platform, this guide will help you get started.
+Welcome to the **Context Layer** Development Guide. This guide provides you with the necessary steps and resources to build, test, and deploy components on the **Context Layer** platform.
 
-## Table of Contents
+## Setting Up Your Development Environment
 
-1. [Setting Up the Development Environment](#setting-up-the-development-environment)
-2. [Creating a Custom AI Agent](#creating-a-custom-ai-agent)
-3. [Interacting with Ethereum Smart Contracts](#interacting-with-ethereum-smart-contracts)
-4. [Building New Integrations](#building-new-integrations)
-5. [Testing Your Code](#testing-your-code)
-6. [Contributing to Context Layer](#contributing-to-context-layer)
+To begin developing with **Context Layer**, you need to set up the following tools:
 
-## 1. Setting Up the Development Environment
+1. **Node.js & npm**: Install [Node.js](https://nodejs.org/) (which includes npm) to manage dependencies and run the development environment.
+2. **Truffle**: A popular development framework for Ethereum, used to compile, test, and deploy smart contracts.
 
-Before you begin development, make sure your environment is properly configured.
+   * Install via npm:
+     `npm install -g truffle`
+3. **Ganache**: A personal Ethereum blockchain for testing and deploying contracts.
 
-### Prerequisites
+   * Download [Ganache](https://www.trufflesuite.com/ganache).
 
-* **Node.js** (version 14 or higher)
-* **npm** (Node Package Manager)
-* **Truffle Suite** for smart contract development
-* **Ganache** (for local Ethereum testing)
+### Example Setup
 
-### Install Dependencies
-
-Start by cloning the repository and installing the required dependencies:
-
-```bash
-git clone https://github.com/contextlayerco/contextlayer.git
-cd contextlayer
-npm install
-```
-
-### Setup Local Ethereum Network (Optional)
-
-If you're planning to interact with Ethereum smart contracts locally, you can use **Ganache** to run a local Ethereum network. Download Ganache and start a local blockchain instance.
-
-* Download: [Ganache](https://www.trufflesuite.com/ganache)
-* Configure your `.env` file to use the local Ethereum network:
-
-```bash
-ETHEREUM_RPC_URL=http://localhost:7545
-```
-
-## 2. Creating a Custom AI Agent
-
-AI agents are the core entities in **Context Layer**. You can create a custom AI agent by following the steps below.
-
-### Step 1: Define Your Agent's Logic
-
-Start by defining the logic for your AI agent. This can include decision-making algorithms, interactions with decentralized applications (dApps), and blockchain transactions.
-
-Example:
-
-```javascript
-class CustomAI {
-    constructor(web3, contractAddress) {
-        this.web3 = web3;
-        this.contractAddress = contractAddress;
-        this.contract = new web3.eth.Contract(abi, contractAddress);
-    }
-
-    async analyzeBlockchainData(data) {
-        if (data.price > 100) {
-            this.executeTrade();
-        }
-    }
-
-    async executeTrade() {
-        await this.contract.methods.tradeTokens().send({ from: this.walletAddress });
-    }
-}
-```
-
-### Step 2: Integrate the AI Agent with the Context Layer Protocol
-
-After defining the agent’s logic, integrate it with the **Context Layer Protocol** to ensure it interacts with the Ethereum blockchain. The protocol will provide the necessary interfaces for real-time data processing.
-
-```javascript
-const agent = new CustomAI(web3, contractAddress);
-ContextLayerProtocol.registerAgent(agent);
-```
-
-### Step 3: Deploy the Agent
-
-Once your AI agent is ready, you can deploy it using the provided deployment scripts:
-
-```bash
-npm run deploy-agent
-```
-
-The agent will be deployed to the blockchain, ready to start interacting with decentralized services.
-
-## 3. Interacting with Ethereum Smart Contracts
-
-**Context Layer** enables AI agents to interact with Ethereum smart contracts. Here’s how you can set up smart contract interactions in your agent.
-
-### Example: Sending Transactions to a Smart Contract
-
-```javascript
-const contract = new web3.eth.Contract(abi, contractAddress);
-
-async function interactWithContract() {
-    const tx = await contract.methods.someMethod().send({ from: walletAddress });
-    console.log("Transaction Sent:", tx);
-}
-```
-
-This interaction sends a transaction to a smart contract on the Ethereum network. Ensure you’ve configured the **walletAddress** and the correct smart contract ABI.
-
-## 4. Building New Integrations
-
-**Context Layer** allows you to integrate additional services and protocols. Whether it’s integrating with new dApps, external APIs, or Layer 2 solutions, you can easily extend the platform.
-
-### Example: Integrating a New dApp
-
-To integrate a new decentralized application (dApp) with **Context Layer**, you'll need to:
-
-1. Define the dApp’s interaction interface (e.g., contract ABI).
-2. Implement the necessary functions to communicate with the dApp’s smart contracts.
-3. Use the **Context Layer Protocol** to allow AI agents to interact with the dApp.
-
-Example of integrating a decentralized exchange (DEX):
-
-```javascript
-class DEXIntegration {
-    constructor(web3, dexContractAddress) {
-        this.dexContract = new web3.eth.Contract(abi, dexContractAddress);
-    }
-
-    async swapTokens(tokenA, tokenB, amount) {
-        const tx = await this.dexContract.methods.swap(tokenA, tokenB, amount).send({ from: walletAddress });
-        console.log("Tokens Swapped:", tx);
-    }
-}
-```
-
-## 5. Testing Your Code
-
-To ensure your code works as expected, **Context Layer** supports unit testing and integration testing.
-
-### Setting Up Tests
-
-1. Install the necessary testing dependencies:
+1. Clone the **Context Layer** repository:
 
    ```bash
-   npm install --save-dev mocha chai
+   git clone https://github.com/contextlayerco/contextlayer.git
+   cd contextlayer
    ```
 
-2. Create test files in the `test/` directory and write your tests:
-
-```javascript
-const { assert } = require('chai');
-const CustomAI = require('../src/CustomAI');
-
-describe('CustomAI Tests', () => {
-    it('should execute trade when price exceeds threshold', () => {
-        const ai = new CustomAI(mockWeb3, mockContract);
-        ai.analyzeBlockchainData({ price: 150 });
-        assert.isTrue(ai.tradeExecuted);
-    });
-});
-```
-
-3. Run the tests:
+2. Install dependencies:
 
    ```bash
-   npm run test
+   npm install
    ```
 
-## 6. Contributing to Context Layer
+3. Start Ganache to create a local test network.
 
-We welcome contributions to **Context Layer**! Whether it’s fixing bugs, adding new features, or improving documentation, your contributions are valuable.
+4. Compile and migrate the contracts using Truffle:
+
+   ```bash
+   truffle compile
+   truffle migrate
+   ```
+
+### Running Tests
+
+We encourage testing as you develop to ensure everything works as expected.
+
+1. Run unit tests with Truffle:
+
+   ```bash
+   truffle test
+   ```
+
+2. You can also write and execute smart contract tests using **Mocha** and **Chai** (commonly used with Truffle).
+
+## Writing Smart Contracts
+
+When developing for **Context Layer**, the core components are smart contracts interacting with the Ethereum blockchain. Here are some important considerations:
+
+### Contract Design
+
+1. **Modularity**: Break down your contract into smaller, manageable modules for better maintainability.
+2. **Security**: Always check for common vulnerabilities such as reentrancy, overflow, and underflow attacks. Use OpenZeppelin contracts for secure, audited implementations.
+
+### Example Contract
+
+```solidity
+pragma solidity ^0.8.0;
+
+contract ContextLayer {
+
+    address public owner;
+
+    constructor() {
+        owner = msg.sender;
+    }
+
+    modifier onlyOwner() {
+        require(msg.sender == owner, "Not authorized");
+        _;
+    }
+
+    function updateOwner(address newOwner) public onlyOwner {
+        owner = newOwner;
+    }
+}
+```
+
+## Integrating AI Agents
+
+The **Context Layer** allows you to develop AI agents that can interact with Ethereum smart contracts and react to events.
+
+1. **ContextLayer Protocol**: This protocol enables the communication between AI agents and the Ethereum blockchain. It provides real-time data to your AI agents.
+2. **AI Agent Development**: Develop AI agents using Python or any AI framework. Use the ContextLayer Protocol to send and receive blockchain data.
+
+### Example AI Agent
+
+```python
+from contextlayer.protocol import ContextLayerProtocol
+
+class MyAgent:
+    def __init__(self, blockchain_data):
+        self.blockchain_data = blockchain_data
+
+    def make_decision(self):
+        if self.blockchain_data['price'] > 100:
+            return 'BUY'
+        else:
+            return 'SELL'
+
+# Initialize and make decision based on blockchain data
+agent = MyAgent(blockchain_data)
+decision = agent.make_decision()
+```
+
+## Deploying Your Application
+
+Once your contracts are deployed and the AI agent is ready, it’s time to integrate everything and deploy.
+
+1. **Deploy the Smart Contracts**: Use Truffle’s migration feature to deploy the contracts to the Ethereum network.
+2. **Run the AI Agent**: Deploy the AI agent and connect it to the blockchain. Ensure that it’s receiving live data and making decisions based on it.
+
+## Contributing to Context Layer
+
+We welcome contributions to Context Layer! Whether it’s fixing bugs, adding new features, or improving documentation, your contributions are valuable and help make the platform stronger.
 
 ### How to Contribute
 
-1. Fork the repository and create a new branch.
-2. Make your changes and write tests for new features.
-3. Submit a pull request with a clear description of what you’ve changed.
+1. **Fork the repository**: Begin by forking the [Context Layer repository](#) to your GitHub account.
 
-Please follow our [Code of Conduct](./CODE_OF_CONDUCT.md) and [Contributing Guidelines](./CONTRIBUTING.md) when contributing.
+2. **Create a new branch**: Once you've forked the repository, create a new branch from the `main` branch for your changes.
+
+3. **Make your changes**: Modify the code, fix bugs, or add new features. Be sure to write tests for new features to maintain code integrity.
+
+4. **Write tests**: For any new features, make sure to add corresponding tests to ensure the platform behaves as expected.
+
+5. **Submit a pull request (PR)**: Once you’ve made your changes, submit a pull request with a clear description of what you’ve changed and why. Ensure the PR is against the `main` branch.
+
+6. **Review process**: After submitting your PR, it will be reviewed by a team member. If there are any changes required, they will be discussed and incorporated.
+
+### Code of Conduct
+
+When contributing to **Context Layer**, please follow our [Code of Conduct](#). It ensures that the community remains respectful, collaborative, and welcoming to everyone.
+
+### Contributing Guidelines
+
+To help streamline the process, make sure to review our [Contributing Guidelines](#) for specifics on submitting pull requests, code style, and how to handle issues.
 
 ---
 
-With this guide, you should now have the knowledge to build, extend, and contribute to the **Context Layer** platform. For more advanced topics, such as optimization and security, check out the [API Reference](./api-reference.md) and [Security](./security.md) sections.
+With this guide, you should now have the knowledge to build, extend, and contribute to the **Context Layer** platform. For more advanced topics, such as optimization and security, check out the **API Reference** and **Security** sections.
 
 ---
