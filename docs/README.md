@@ -18,6 +18,8 @@ Context Layer is a decentralized platform that empowers AI agents to interact wi
 - [Use Cases](./use-cases.md)
 - [Contributing](./contributing.md)
 - [FAQ](./faq.md)
+- [Roadmap](./roadmap.md)
+
 
 ## Social Links
 
