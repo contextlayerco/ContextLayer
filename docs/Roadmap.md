@@ -1,57 +1,52 @@
-# 🧠 ContextLayer Roadmap | Q2–Q4 2025
+# 🗺️ ContextLayer Roadmap
+
+ContextLayer merges AI and blockchain into one unified execution layer — built for onchain agents that don’t just talk, but act. Below is our milestone-based roadmap combined with the core modules that power each phase.
 
 ---
 
-## 🔹 Q2 2025 – Foundation Layer
+## 📦 Q2 2025 – Foundation Layer
 
-> Laying the groundwork for real onchain AI execution.
+Core focus: Agent deployment, secure execution, and base infrastructure.
 
-- ✅ Deploy CXLYR Token (ERC-20, 1B Supply)
-- ✅ Launch Autonomous Chat AI v1 (voice + text)
-- ✅ Onchain Token Transfers via Agent
-- ✅ Contact Book (Name-to-Address Linking)
-- ✅ Uniswap Listing + LP Lock
-- ✅ Fully Decentralized IPFS Frontend (Fleek-hosted)
-- ✅ Core Smart Contract Infrastructure (agent executor, router, signer)
-- ✅ Community Contest (Chat-to-Earn)
+- [x] Autonomous Agent Deployment (Chat & Voice)
+- [ ] ERC-20 Token Swaps (via smart contracts)
+- [x] Encrypted Onchain Transfers
+- [ ] Wallet Integration (Privy-based)
+- [x] Decentralized IPFS Frontend
+- [x] Context Memory (save commands, track history)
 
 ---
 
-## 🔹 Q3 2025 – Utility Expansion
+## 🚀 Q3 2025 – Utility Expansion
 
-> Moving beyond messages — into real-world, multi-step execution.
+Core focus: Multi-chain support, dev tools, and agent intelligence.
 
-- 🔄 Token Swap Integration (Uniswap, 1inch support)
-- 📦 Deploy Contract via Voice/Text Prompt
-- 🔐 Permission System for Agents (allowlist/blocklist)
-- 🧩 Social Handle Integration (Twitter, Farcaster, ENS)
-- 🗣️ Mobile Voice-to-Chain App (iOS + Android via Locanox)
-- 🧠 AI Skill Plugins (SDK for agent extensions)
-- 📲 ContextLayer SDK v1 for dApp Builders
-- 📈 Usage-Driven Airdrop Tracker System
-
----
-
-## 🔹 Q4 2025 – Agent Ecosystem Launch
-
-> The age of modular, autonomous onchain agents.
-
-- 👥 Agent Profiles + Skill Store
-- 🤖 Deploy Custom Agents (with training & context)
-- 🧱 Multi-Agent Collaboration (sequenced execution flows)
-- 📡 IPFS Chat Log Anchoring + ZK Context Snapshots
-- 💬 Farcaster / Telegram Command Interface
-- 🛠️ Developer Portal + Agent API
-- 📢 Community Governance (CXLYR staking, proposal system)
-- 🚀 Cross-Chain Execution (Base, Arbitrum, Polygon)
+- [ ] Multi-chain Support (Bridge, Swap across chains)
+- [ ] Contact Book: Name-tagged wallet contacts
+- [ ] Agent Memory Upgrades: Long-term intent recall
+- [ ] Voice Command Customization (multi-language, accent handling)
+- [ ] Advanced Swap Routing (DEX aggregator integration)
+- [ ] Privacy Layer Research (zk + MPC trials)
+- [ ] ContextAI Lab – Build, test, and optimize AI agents
+- [ ] LayerStore (Beta) – Marketplace for agents & modules
+- [ ] Context Developer Suite – SDKs, templates, and boilerplates
 
 ---
 
-## 🧪 Experimental (Under R&D)
+## 🌐 Q4 2025 – Ecosystem Growth
 
-> Not guaranteed, but actively explored:
+Core focus: Infrastructure hardening, SDKs, transparency, and scale.
 
-- 🧬 Onchain Memory Threading for Persistent Agents
-- 🔊 Full Voice Agent Execution via Smart Speaker
-- 🔒 MPC Wallet-Controlled Agents (Shared Access)
-- 🧭 AI Flow Editor (Visual Logic Builder for Agents)
+- [ ] Context API – RESTful interface for agent commands
+- [ ] ChainSecurity – Data encryption & smart contract protection
+- [ ] ContextChain – Onchain interaction & logging
+- [ ] AI Agent SDK for Developers
+- [ ] Agent Store: Deploy and monetize community-built agents
+- [ ] LayerMesh – Decentralized compute for scalable AI agents
+- [ ] Protocol Extensions – Plug-and-play smart contract modules
+- [ ] Community Collaboration Tools – Fork, remix, deploy shared agents
+
+---
+
+> This roadmap is updated regularly as we progress.  
+For latest updates, visit [https://contextlayer.co](https://contextlayer.co) or chat directly with the agent at [chat.contextlayer.co](https://chat.contextlayer.co).
