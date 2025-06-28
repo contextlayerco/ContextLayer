@@ -27,3 +27,34 @@
 - Liquidity pool is fully verifiable on-chain via Uniswap.
 - Team tokens subject to vesting schedule (to be published).
 - Ecosystem & airdrop allocations will be deployed progressively based on roadmap execution.
+
+## 🧠 $CXLYR Utility Plan
+
+At this stage, **$CXLYR does not yet have direct utility** — and this is by design.
+
+We’re still early, with a small market cap and a focus on building. Launching token utility too early can create unhealthy pressure and speculation before real users are in place.
+
+Our top priority right now is to **build the product** and get people actively using the **ContextLayer AI agent**.
+
+### Future Utility of $CXLYR
+
+As the platform and user base grow, $CXLYR will power the entire ContextLayer ecosystem:
+
+- 🪙 **Pay for onchain agent actions**  
+  Use $CXLYR to perform actions like swaps, bridges, lending, and more via AI agents.
+
+- 🌐 **Unlock premium features through staking**  
+  Access advanced agent capabilities and voice-based automation with staked tokens.
+
+- 🤖 **Customize AI agents**  
+  Personalize your onchain agent’s behavior and skills using $CXLYR.
+
+- 🛠️ **Reward developers and contributors**  
+  Incentivize builders creating tools, modules, and plugins for the ContextLayer protocol.
+
+- 🗳️ **Participate in governance**  
+  Vote on upgrades, protocol parameters, and ecosystem decisions.
+
+---
+
+> ⚠️ Note: Token utility will launch gradually as the protocol matures. Real utility follows real adoption.
